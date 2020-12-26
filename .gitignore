@@ -105,3 +105,6 @@ dist
 
 # db credentials
 poc-autotask-backend/knexfile.js
+
+# Backend .env
+poc-autotask-backend/.env

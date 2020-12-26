@@ -5,7 +5,7 @@ const bodyParser = require('body-parser')
 app.use(bodyParser.json())
 
 app.get('/', (req, res) => {
-    res.status(200).send('Meu Baackend!')
+    res.status(200).send('Meu Backend!')
 })
 
 app.listen(3000, () => {

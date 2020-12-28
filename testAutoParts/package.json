@@ -1,0 +1,21 @@
+{
+  "name": "testautoparts",
+  "version": "1.0.0",
+  "description": "Teste de integração do backend com os devices",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [
+    "test",
+    "automation",
+    "arduino"
+  ],
+  "author": "Mario Oliveira",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "johnny-five": "^2.0.0",
+    "nodemon": "^2.0.6"
+  }
+}

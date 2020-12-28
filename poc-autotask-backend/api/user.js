@@ -10,10 +10,12 @@ module.exports = app => {
     const save = (req, res) => {
         obterHash(req.body.password, hash => {
 
-            console.log(req.body.password)
-            console.log(hash)
-            console.log(req.body.name)
-            console.log(req.body.email)
+            // ---------- Testes ----------
+            // console.log(req.body.password)
+            // console.log(hash)
+            // console.log(req.body.name)
+            // console.log(req.body.email)
+            // ---------- Testes ----------
 
             const password = hash
 

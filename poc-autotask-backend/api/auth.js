@@ -4,19 +4,26 @@ const bcrypt = require('bcrypt-nodejs')
 
 module.exports = app => {
     const signin = async (req, res) => {
-        if(!req.body.email || !req.body.password) {
+        if (!req.body.email || !req.body.password) {
             return res.status(400).send('Dados Incompletos')
         }
-    
+
         const user = await app.db('users')
             .where({
                 email: req.body.email
             })
             .first()
-        
-        if(user) {
+
+        if (user) {
             bcrypt.compare(req.body.password, user.password, (err, isMatch) => {
-                if(err || !isMatch) {
+                if (err || !isMatch) {
+                    // ---------- Testes ----------
+                    res.json({
+                        erro: err,
+                        passwordIsMatch: isMatch,
+                        other: 'Senha não bate!'
+                    })
+                    // ---------- Testes ----------
                     return res.status(401).send()
                 }
 

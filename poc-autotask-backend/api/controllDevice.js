@@ -2,7 +2,7 @@ const { authSecret } = require('../.env')
 const jwt = require('jwt-simple')
 const bcrypt = require('bcrypt-nodejs')
 var five = require("johnny-five");
-var board = new five.Board();
+// var board = new five.Board();
 
 module.exports = app => {
     const toggleLed = async (req, res) => {
